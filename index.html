@@ -147,7 +147,8 @@
   #contact .section-subtitle { color:rgba(255,232,204,.55); }
   .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start; }
   .contact-items { display:flex; flex-direction:column; gap:1.2rem; }
-  .contact-item { display:flex; gap:1rem; align-items:flex-start; padding:1.2rem; background:rgba(255,107,53,.05); border:1px solid rgba(255,107,53,.14); }
+  .contact-item { display:flex; gap:1rem; align-items:flex-start; padding:1.2rem; background:rgba(255,107,53,.05); border:1px solid rgba(255,107,53,.14); transition:border-color .2s, background .2s; }
+  a:has(.contact-item):hover .contact-item { border-color:var(--fire1); background:rgba(255,107,53,.1); }
   .contact-icon { color:var(--fire1); font-size:1.2rem; }
   .contact-item-label { font-family:'JetBrains Mono',monospace; font-size:.68rem; letter-spacing:.15em; color:var(--fire1); text-transform:uppercase; margin-bottom:.2rem; }
   .contact-item-value { color:var(--cream); font-size:.9rem; }
@@ -191,7 +192,7 @@
 <section id="home">
   <canvas id="hero-canvas"></canvas>
   <div class="hero-content">
-    <div class="hero-eyebrow">// Quantum Physics &amp; Ultracold Matter</div>
+    <div class="hero-eyebrow">// Ultracold Quantum Matter</div>
     <h1 class="hero-name">Ratheejit<br><em>Ghosh</em></h1>
     <p class="hero-tagline">Research Associate at IIT Gandhinagar. Exploring the quantum frontier — from dipolar supersolids and droplet arrays to quantum sensing, open quantum systems, and atomtronics.</p>
     <div class="hero-tags">
@@ -199,7 +200,7 @@
       <span class="tag">BEC &amp; Supersolids</span>
       <span class="tag">Quantum Sensing</span>
       <span class="tag">Atomtronics</span>
-      <span class="tag">Path Integral MC</span>
+      <span class="tag">Quantum Monte Carlo</span>
     </div>
     <div class="hero-cta">
       <a href="#research" class="btn-primary">Explore Research</a>
@@ -267,7 +268,7 @@
     <div class="viz-tabs">
       <button class="viz-tab active" onclick="switchViz('bec',this)">BEC Cloud</button>
       <button class="viz-tab" onclick="switchViz('droplet',this)">Droplet Array</button>
-      <button class="viz-tab" onclick="switchViz('supersolid',this)">3D Supersolid</button>
+      <button class="viz-tab" onclick="switchViz('supersolid',this)">Supersolids</button>
       <button class="viz-tab" onclick="switchViz('rotating',this)">Rotating Gas</button>
       <button class="viz-tab" onclick="switchViz('sensing',this)">Quantum Sensing</button>
     </div>
@@ -423,10 +424,13 @@
         <div class="contact-item"><div class="contact-icon">📍</div><div><div class="contact-item-label">Previous</div><div class="contact-item-value">IISER Pune, Dr. Homi Bhabha Road, Pune 411008</div></div></div>
       </div>
       <div>
-        <p class="pub-group-title" style="color:var(--fire1);margin-bottom:1rem">References</p>
-        <div class="ref-item"><div class="ref-name">Prof. Rejish Nath</div><div class="ref-role">Professor, Department of Physics, IISER Pune</div><div class="ref-email">rejishnath@gmail.com</div></div>
-        <div class="ref-item"><div class="ref-name">Dr. Fabio Cinti</div><div class="ref-role">Associate Professor, Dept. of Physics &amp; Astronomy, University of Florence, Italy</div><div class="ref-email">fabio.cinti@unifi.it</div></div>
-        <div class="ref-item"><div class="ref-name">Dr. Bijay Kumar Agarwalla</div><div class="ref-role">Associate Professor, Department of Physics, IISER Pune</div><div class="ref-email">bijay@iiserpune.ac.in</div></div>
+        <p class="pub-group-title" style="color:var(--fire1);margin-bottom:1rem">Profiles</p>
+        <a href="https://scholar.google.com/citations?user=FcoK4_EAAAAJ&hl=en" target="_blank" rel="noopener" style="text-decoration:none">
+          <div class="contact-item" style="margin-bottom:.75rem"><div class="contact-icon">🎓</div><div><div class="contact-item-label">Google Scholar</div><div class="contact-item-value">View publications &amp; citations →</div></div></div>
+        </a>
+        <a href="https://in.linkedin.com/in/ratheejit-ghosh-7b6a2a104" target="_blank" rel="noopener" style="text-decoration:none">
+          <div class="contact-item"><div class="contact-icon">🔗</div><div><div class="contact-item-label">LinkedIn</div><div class="contact-item-value">Connect with me →</div></div></div>
+        </a>
       </div>
     </div>
   </div>
